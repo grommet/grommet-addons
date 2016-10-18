@@ -1,0 +1,10 @@
+exports[`RoutedAnchor has correct default options 1`] = `
+<div>
+  <a
+    aria-label={undefined}
+    className="grommetux-anchor"
+    href={undefined}
+    method="push"
+    onClick={[Function bound _onClick]} />
+</div>
+`;

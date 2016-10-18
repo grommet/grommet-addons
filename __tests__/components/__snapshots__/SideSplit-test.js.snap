@@ -1,0 +1,50 @@
+exports[`SideSplit has correct default options 1`] = `
+<div
+  className="grommetux-split">
+  <div
+    className="grommetux-split__column grommetux-split__column--fixed">
+    <div>
+      <div>
+        <button
+          aria-label="Close Menu"
+          className="grommetux-button grommetux-button--disabled grommetux-button--plain grommetux-button--icon"
+          disabled={true}
+          href={undefined}
+          id={undefined}
+          onBlur={[Function onBlur]}
+          onClick={undefined}
+          onFocus={[Function onFocus]}
+          onMouseDown={[Function onMouseDown]}
+          onMouseUp={[Function onMouseUp]}
+          type="button">
+          <span
+            className="grommetux-button__icon">
+            <svg
+              aria-label="close"
+              className="grommetux-control-icon grommetux-control-icon-close grommetux-control-icon--responsive"
+              height="24px"
+              role="img"
+              version="1.1"
+              viewBox="0 0 24 24"
+              width="24px">
+              <path
+                d="M3,3 L21,21 M3,21 L21,3"
+                fill="none"
+                stroke="#000000"
+                strokeWidth="2" />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="grommetux-split__column grommetux-split__column--fixed grommetux-split__column--flex">
+    <div>
+      <div>
+        <span />
+      </div>
+    </div>
+  </div>
+</div>
+`;

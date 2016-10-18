@@ -1,0 +1,16 @@
+exports[`RoutedButton has correct default options 1`] = `
+<div>
+  <button
+    aria-label={undefined}
+    className="grommetux-button"
+    disabled={false}
+    href={undefined}
+    id={undefined}
+    onBlur={[Function onBlur]}
+    onClick={[Function bound _onClick]}
+    onFocus={[Function onFocus]}
+    onMouseDown={[Function onMouseDown]}
+    onMouseUp={[Function onMouseUp]}
+    type="button" />
+</div>
+`;
