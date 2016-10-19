@@ -7,7 +7,7 @@ import RoutedAnchor from '../../src/js/components/RoutedAnchor';
 import RouterContext from '../utils/RouterContext';
 
 describe('RoutedAnchor', () => {
-  it('has correct default options', () => { 
+  it('has correct default options', () => {
     const component = renderer.create(
       <RouterContext>
         <RoutedAnchor path='test' />

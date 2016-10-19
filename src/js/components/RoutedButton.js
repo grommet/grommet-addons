@@ -19,7 +19,7 @@ export default class RoutedButton extends Component {
     const { router } = this.context;
 
     event.preventDefault();
-    
+
     if ('push' === method) {
       router.push(path);
     } else if ('replace' === method) {

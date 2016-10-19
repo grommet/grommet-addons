@@ -28,7 +28,7 @@ gulp.task('release:stable', ['dist', 'release:createTmp'], function(done) {
           throw err;
         }
 
-        process.chdir('./tmp/grommet-templates');
+        process.chdir('./tmp/grommet-addons');
         git.checkout('stable', function(err) {
           if (err) {
             throw err;
