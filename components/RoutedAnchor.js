@@ -1,0 +1,125 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
+
+var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+var _objectWithoutProperties2 = require('babel-runtime/helpers/objectWithoutProperties');
+
+var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames2 = require('classnames');
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _Anchor = require('grommet/components/Anchor');
+
+var _Anchor2 = _interopRequireDefault(_Anchor);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+* This component is used to augment Grommet anchor
+* with routing/history capabilities.
+*/
+var RoutedAnchor = function (_Component) {
+  (0, _inherits3.default)(RoutedAnchor, _Component);
+
+  function RoutedAnchor() {
+    (0, _classCallCheck3.default)(this, RoutedAnchor);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (RoutedAnchor.__proto__ || (0, _getPrototypeOf2.default)(RoutedAnchor)).call(this));
+
+    _this._onClick = _this._onClick.bind(_this);
+    return _this;
+  }
+
+  (0, _createClass3.default)(RoutedAnchor, [{
+    key: '_onClick',
+    value: function _onClick(event) {
+      var _props = this.props;
+      var method = _props.method;
+      var onClick = _props.onClick;
+      var path = _props.path;
+      var router = this.context.router;
+
+
+      event.preventDefault();
+
+      if ('push' === method) {
+        router.push(path);
+      } else if ('replace' === method) {
+        router.replace(path);
+      }
+
+      if (onClick) {
+        onClick();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props2 = this.props;
+      var className = _props2.className;
+      var path = _props2.path;
+      var props = (0, _objectWithoutProperties3.default)(_props2, ['className', 'path']);
+      var router = this.context.router;
+
+      var classes = (0, _classnames3.default)((0, _defineProperty3.default)({}, 'active', router.isActive(path)), className);
+      var href = router.createPath(path);
+      return _react2.default.createElement(_Anchor2.default, (0, _extends3.default)({}, props, { className: classes, href: href,
+        onClick: this._onClick }));
+    }
+  }]);
+  return RoutedAnchor;
+}(_react.Component); // (C) Copyright 2014-2015 Hewlett Packard Enterprise Development LP
+
+RoutedAnchor.displayName = 'RoutedAnchor';
+exports.default = RoutedAnchor;
+;
+
+RoutedAnchor.propTypes = {
+  method: _react.PropTypes.oneOf(['push', 'replace']),
+  path: _react.PropTypes.string.isRequired
+};
+
+RoutedAnchor.defaultProps = {
+  method: 'push'
+};
+
+RoutedAnchor.contextTypes = {
+  router: _react.PropTypes.object.isRequired
+};
+module.exports = exports['default'];

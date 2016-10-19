@@ -1,9 +1,0 @@
-exports[`AnnotatedMeter has correct default options 1`] = `
-<div
-  className="grommetux-box grommetux-box--direction-column grommetux-box--responsive grommetux-box--pad-none"
-  id={undefined}
-  onClick={undefined}
-  role={undefined}
-  style={Object {}}
-  tabIndex={undefined} />
-`;
