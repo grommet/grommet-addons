@@ -42,7 +42,7 @@ export default class AnnotatedMeter extends Component {
 
       middle = (
         <Meter series={series} stacked={true} label={false} max={max}
-          tsize={size} activeIndex={index}
+          size={size} activeIndex={index}
           onActive={(index) => this.setState({ index: index })} />
       );
 
@@ -76,10 +76,12 @@ export default class AnnotatedMeter extends Component {
     }
 
     return (
-      <Box>
-        {top}
-        {middle}
-        {bottom}
+      <Box align="start">
+        <Box>
+          {top}
+          {middle}
+          {bottom}
+        </Box>
       </Box>
     );
   }
@@ -95,7 +97,7 @@ AnnotatedMeter.propTypes = {
     value: PropTypes.number.isRequired
   })).isRequired,
   size: Meter.propTypes.size,
-  type: PropTypes.oneOf(['bar', 'circle']),
+  type: PropTypes.oneOf(['bar', 'circle']).isRequired,
   units: PropTypes.string
 };
 
