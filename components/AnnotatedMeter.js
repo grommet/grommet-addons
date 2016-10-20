@@ -109,7 +109,7 @@ var AnnotatedMeter = function (_Component) {
         );
 
         middle = _react2.default.createElement(_Meter2.default, { series: series, stacked: true, label: false, max: max,
-          tsize: size, activeIndex: index,
+          size: size, activeIndex: index,
           onActive: function onActive(index) {
             return _this2.setState({ index: index });
           } });
@@ -163,10 +163,14 @@ var AnnotatedMeter = function (_Component) {
 
       return _react2.default.createElement(
         _Box2.default,
-        null,
-        top,
-        middle,
-        bottom
+        { align: 'start' },
+        _react2.default.createElement(
+          _Box2.default,
+          null,
+          top,
+          middle,
+          bottom
+        )
       );
     }
   }]);
@@ -186,7 +190,7 @@ AnnotatedMeter.propTypes = {
     value: _react.PropTypes.number.isRequired
   })).isRequired,
   size: _Meter2.default.propTypes.size,
-  type: _react.PropTypes.oneOf(['bar', 'circle']),
+  type: _react.PropTypes.oneOf(['bar', 'circle']).isRequired,
   units: _react.PropTypes.string
 };
 
