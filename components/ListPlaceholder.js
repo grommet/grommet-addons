@@ -91,7 +91,7 @@ var ListPlaceholder = function (_Component) {
           content2
         );
       }
-      return content1;
+      return content1 || null;
     }
   }]);
   return ListPlaceholder;
