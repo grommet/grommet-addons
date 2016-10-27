@@ -85,8 +85,8 @@ export default class AnnotatedMeter extends Component {
     if (legend) {
       legendElement = (
         <Box alignSelf={alignLegend}>
-          <Legend series={series} units={units} activeIndex={index}
-            onActive={this._onActive} />
+          <Legend series={series} units={units} total={true}
+            activeIndex={index} onActive={this._onActive} />
         </Box>
       );
     }
