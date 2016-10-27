@@ -36,7 +36,7 @@ export default class ListPlaceholder extends Component {
         </Box>
       );
     }
-    return content1;
+    return content1 || null;
   }
 
 };
