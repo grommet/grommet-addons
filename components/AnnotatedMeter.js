@@ -162,8 +162,8 @@ var AnnotatedMeter = function (_Component) {
         legendElement = _react2.default.createElement(
           _Box2.default,
           { alignSelf: alignLegend },
-          _react2.default.createElement(_Legend2.default, { series: series, units: units, activeIndex: index,
-            onActive: this._onActive })
+          _react2.default.createElement(_Legend2.default, { series: series, units: units, total: true,
+            activeIndex: index, onActive: this._onActive })
         );
       }
 
