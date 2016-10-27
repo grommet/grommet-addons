@@ -71,15 +71,15 @@ export default class AnnotatedMeter extends Component {
       alignLegend = 'center';
     }
 
-    if (max) {
-      bottom = (
-        <Box direction='row' justify='between' align='center'
-          responsive={false}>
-          <Label size='small'>0 {units}</Label>
-          <Label size='small'>{max} {units}</Label>
-        </Box>
-      );
-    }
+    // if (max) {
+    //   bottom = (
+    //     <Box direction='row' justify='between' align='center'
+    //       responsive={false}>
+    //       <Label size='small'>0 {units}</Label>
+    //       <Label size='small'>{max} {units}</Label>
+    //     </Box>
+    //   );
+    // }
 
     let legendElement;
     if (legend) {
