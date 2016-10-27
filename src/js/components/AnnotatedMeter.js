@@ -4,7 +4,7 @@ import React, { Component, PropTypes } from 'react';
 import Meter from 'grommet/components/Meter';
 import Box from 'grommet/components/Box';
 import Value from 'grommet/components/Value';
-import Label from 'grommet/components/Label';
+// import Label from 'grommet/components/Label';
 import Legend from 'grommet/components/Legend';
 import FormattedMessage from 'grommet/components/FormattedMessage';
 
