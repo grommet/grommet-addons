@@ -40,10 +40,6 @@ var _Value = require('grommet/components/Value');
 
 var _Value2 = _interopRequireDefault(_Value);
 
-var _Label = require('grommet/components/Label');
-
-var _Label2 = _interopRequireDefault(_Label);
-
 var _Legend = require('grommet/components/Legend');
 
 var _Legend2 = _interopRequireDefault(_Legend);
@@ -53,6 +49,9 @@ var _FormattedMessage = require('grommet/components/FormattedMessage');
 var _FormattedMessage2 = _interopRequireDefault(_FormattedMessage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import Label from 'grommet/components/Label';
+// (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
 
 var AnnotatedMeter = function (_Component) {
   (0, _inherits3.default)(AnnotatedMeter, _Component);
@@ -136,26 +135,15 @@ var AnnotatedMeter = function (_Component) {
         alignLegend = 'center';
       }
 
-      if (max) {
-        bottom = _react2.default.createElement(
-          _Box2.default,
-          { direction: 'row', justify: 'between', align: 'center',
-            responsive: false },
-          _react2.default.createElement(
-            _Label2.default,
-            { size: 'small' },
-            '0 ',
-            units
-          ),
-          _react2.default.createElement(
-            _Label2.default,
-            { size: 'small' },
-            max,
-            ' ',
-            units
-          )
-        );
-      }
+      // if (max) {
+      //   bottom = (
+      //     <Box direction='row' justify='between' align='center'
+      //       responsive={false}>
+      //       <Label size='small'>0 {units}</Label>
+      //       <Label size='small'>{max} {units}</Label>
+      //     </Box>
+      //   );
+      // }
 
       var legendElement = void 0;
       if (legend) {
@@ -182,7 +170,7 @@ var AnnotatedMeter = function (_Component) {
     }
   }]);
   return AnnotatedMeter;
-}(_react.Component); // (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
+}(_react.Component);
 
 AnnotatedMeter.displayName = 'AnnotatedMeter';
 exports.default = AnnotatedMeter;
