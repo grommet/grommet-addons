@@ -3,15 +3,16 @@
 import React from 'react';
 import renderer from 'react/lib/ReactTestRenderer';
 
-import RoutedButton from '../../src/js/components/RoutedButton';
-import RouterContext from '../utils/RouterContext';
+import FilterControl from '../../src/js/components/FilterControl';
 
-describe('RoutedButton', () => {
+// needed because this:
+// https://github.com/facebook/jest/issues/1353
+jest.mock('react-dom');
+
+describe('FilterControl', () => {
   it('has correct default options', () => {
     const component = renderer.create(
-      <RouterContext>
-        <RoutedButton path='test' />
-      </RouterContext>
+      <FilterControl />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

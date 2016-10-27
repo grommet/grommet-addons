@@ -1,9 +1,117 @@
-exports[`AnnotatedMeter has correct default options 1`] = `
+exports[`AnnotatedMeter has correct simple options 1`] = `
 <div
-  className="grommetux-box grommetux-box--direction-column grommetux-box--responsive grommetux-box--pad-none"
+  className="grommetux-box grommetux-box--direction-column grommetux-box--align-start grommetux-box--responsive grommetux-box--pad-none"
   id={undefined}
   onClick={undefined}
   role={undefined}
   style={Object {}}
-  tabIndex={undefined} />
+  tabIndex={undefined}>
+  <div
+    className="grommetux-box grommetux-box--direction-column grommetux-box--responsive grommetux-box--pad-none"
+    id={undefined}
+    onClick={undefined}
+    role={undefined}
+    style={Object {}}
+    tabIndex={undefined}>
+    <div
+      className="grommetux-box grommetux-box--direction-row grommetux-box--justify-between grommetux-box--align-center grommetux-box--pad-between-small"
+      id={undefined}
+      onClick={undefined}
+      role={undefined}
+      style={Object {}}
+      tabIndex={undefined}>
+      <div
+        className="grommetux-value grommetux-value--align-start">
+        <div
+          className="grommetux-value__annotated">
+          <span
+            className="grommetux-value__value">
+            30
+          </span>
+        </div>
+      </div>
+      <span>
+        <span>
+          Total
+        </span>
+      </span>
+    </div>
+    <div
+      className="grommetux-meter grommetux-meter--bar grommetux-meter--stacked grommetux-meter--count-2">
+      <div
+        className="grommetux-meter__value-container">
+        <div
+          className="grommetux-meter__graphic-container">
+          <svg
+            aria-label="Bar Meter. , Value: 30, Max: 100"
+            className="grommetux-meter__graphic"
+            height={24}
+            onBlur={[Function bound _onGraphicBlur]}
+            onFocus={[Function bound _onGraphicFocus]}
+            preserveAspectRatio="xMidYMid meet"
+            role="group"
+            tabIndex="0"
+            viewBox="0 0 192 24"
+            width={192}>
+            <g
+              className="grommetux-meter__tracks">
+              <g>
+                <path
+                  className="grommetux-meter__slice"
+                  d="M0,12 L192,12"
+                  data-index={0}
+                  onBlur={[Function bound bound _onActivate]}
+                  onFocus={[Function bound bound _onActivate]} />
+                <path
+                  className="grommetux-meter__hot"
+                  d="M0,12 L192,12"
+                  fill="none"
+                  onClick={undefined}
+                  onMouseOut={[Function bound bound _onActivate]}
+                  onMouseOver={[Function bound bound _onActivate]} />
+              </g>
+            </g>
+            <g
+              className="grommetux-meter__values">
+              <g
+                aria-label="10"
+                role="img">
+                <path
+                  className="grommetux-meter__slice grommetux-color-index-graph-1"
+                  d="M0,12 L20,12"
+                  data-index={0}
+                  onBlur={[Function bound bound _onActivate]}
+                  onFocus={[Function bound bound _onActivate]} />
+                <path
+                  className="grommetux-meter__hot"
+                  d="M0,12 L20,12"
+                  fill="none"
+                  onClick={undefined}
+                  onMouseOut={[Function bound bound _onActivate]}
+                  onMouseOver={[Function bound bound _onActivate]} />
+              </g>
+              <g
+                aria-label="20"
+                role="img">
+                <path
+                  className="grommetux-meter__slice grommetux-color-index-graph-2"
+                  d="M20,12 L59,12"
+                  data-index={1}
+                  onBlur={[Function bound bound _onActivate]}
+                  onFocus={[Function bound bound _onActivate]} />
+                <path
+                  className="grommetux-meter__hot"
+                  d="M20,12 L59,12"
+                  fill="none"
+                  onClick={undefined}
+                  onMouseOut={[Function bound bound _onActivate]}
+                  onMouseOver={[Function bound bound _onActivate]} />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

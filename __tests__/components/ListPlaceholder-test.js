@@ -3,15 +3,16 @@
 import React from 'react';
 import renderer from 'react/lib/ReactTestRenderer';
 
-import RoutedAnchor from '../../src/js/components/RoutedAnchor';
-import RouterContext from '../utils/RouterContext';
+import ListPlaceholder from '../../src/js/components/ListPlaceholder';
 
-describe('RoutedAnchor', () => {
+// needed because this:
+// https://github.com/facebook/jest/issues/1353
+jest.mock('react-dom');
+
+describe('ListPlaceholder', () => {
   it('has correct default options', () => {
     const component = renderer.create(
-      <RouterContext>
-        <RoutedAnchor path='test' />
-      </RouterContext>
+      <ListPlaceholder />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

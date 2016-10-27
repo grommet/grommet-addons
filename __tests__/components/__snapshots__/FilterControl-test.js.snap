@@ -1,0 +1,47 @@
+exports[`FilterControl has correct default options 1`] = `
+<button
+  aria-label={undefined}
+  className="grommetux-button grommetux-button--disabled"
+  disabled={true}
+  href={undefined}
+  id={undefined}
+  onBlur={[Function onBlur]}
+  onClick={undefined}
+  onFocus={[Function onFocus]}
+  onMouseDown={[Function onMouseDown]}
+  onMouseUp={[Function onMouseUp]}
+  type="button">
+  <div
+    className="grommetux-box grommetux-box--direction-column grommetux-box--align-center grommetux-box--responsive grommetux-box--pad-horizontal-small"
+    id={undefined}
+    onClick={undefined}
+    role={undefined}
+    style={Object {}}
+    tabIndex={undefined}>
+    <label
+      className="grommetux-label grommetux-label--margin-none grommetux-label--small"
+      htmlFor={undefined}>
+      .
+    </label>
+    <svg
+      aria-label="filter"
+      className="grommetux-control-icon grommetux-control-icon-filter grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px">
+      <polygon
+        fill="none"
+        points="3 6 10 13 10 21 14 21 14 13 21 6 21 3 3 3"
+        stroke="#000000"
+        strokeWidth="2" />
+    </svg>
+    <label
+      className="grommetux-label grommetux-label--margin-none grommetux-label--small"
+      htmlFor={undefined}>
+      .
+    </label>
+  </div>
+</button>
+`;
