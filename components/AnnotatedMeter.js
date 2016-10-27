@@ -44,13 +44,15 @@ var _Label = require('grommet/components/Label');
 
 var _Label2 = _interopRequireDefault(_Label);
 
+var _Legend = require('grommet/components/Legend');
+
+var _Legend2 = _interopRequireDefault(_Legend);
+
 var _FormattedMessage = require('grommet/components/FormattedMessage');
 
 var _FormattedMessage2 = _interopRequireDefault(_FormattedMessage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
 
 var AnnotatedMeter = function (_Component) {
   (0, _inherits3.default)(AnnotatedMeter, _Component);
@@ -60,16 +62,26 @@ var AnnotatedMeter = function (_Component) {
 
     var _this = (0, _possibleConstructorReturn3.default)(this, (AnnotatedMeter.__proto__ || (0, _getPrototypeOf2.default)(AnnotatedMeter)).call(this));
 
+    _this._onActive = _this._onActive.bind(_this);
     _this.state = {};
     return _this;
   }
 
   (0, _createClass3.default)(AnnotatedMeter, [{
+    key: '_onActive',
+    value: function _onActive(index) {
+      var onActive = this.props.onActive;
+
+      this.setState({ index: index });
+      if (onActive) {
+        onActive(index);
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var _props = this.props;
+      var legend = _props.legend;
       var max = _props.max;
       var series = _props.series;
       var size = _props.size;
@@ -93,7 +105,8 @@ var AnnotatedMeter = function (_Component) {
 
       var top = void 0,
           middle = void 0,
-          bottom = void 0;
+          bottom = void 0,
+          alignLegend = void 0;
       if ('bar' === type) {
 
         top = _react2.default.createElement(
@@ -110,37 +123,20 @@ var AnnotatedMeter = function (_Component) {
 
         middle = _react2.default.createElement(_Meter2.default, { series: series, stacked: true, label: false, max: max,
           size: size, activeIndex: index,
-          onActive: function onActive(index) {
-            return _this2.setState({ index: index });
-          } });
+          onActive: this._onActive });
 
-        bottom = _react2.default.createElement(
-          _Box2.default,
-          { direction: 'row', justify: 'between', align: 'center',
-            responsive: false },
-          _react2.default.createElement(
-            _Label2.default,
-            { size: 'small' },
-            '0 ',
-            units
-          ),
-          _react2.default.createElement(
-            _Label2.default,
-            { size: 'small' },
-            max,
-            ' ',
-            units
-          )
-        );
+        alignLegend = 'start';
       } else if ('circle' === type) {
 
         middle = _react2.default.createElement(_Meter2.default, { type: 'circle', stacked: true, series: series,
           label: _react2.default.createElement(_Value2.default, { value: value, units: units, align: 'center', label: label,
             size: size }), max: max, size: size, activeIndex: index,
-          onActive: function onActive(index) {
-            return _this2.setState({ index: index });
-          } });
+          onActive: this._onActive });
 
+        alignLegend = 'center';
+      }
+
+      if (max) {
         bottom = _react2.default.createElement(
           _Box2.default,
           { direction: 'row', justify: 'between', align: 'center',
@@ -161,6 +157,16 @@ var AnnotatedMeter = function (_Component) {
         );
       }
 
+      var legendElement = void 0;
+      if (legend) {
+        legendElement = _react2.default.createElement(
+          _Box2.default,
+          { alignSelf: alignLegend },
+          _react2.default.createElement(_Legend2.default, { series: series, units: units, activeIndex: index,
+            onActive: this._onActive })
+        );
+      }
+
       return _react2.default.createElement(
         _Box2.default,
         { align: 'start' },
@@ -169,19 +175,22 @@ var AnnotatedMeter = function (_Component) {
           null,
           top,
           middle,
-          bottom
+          bottom,
+          legendElement
         )
       );
     }
   }]);
   return AnnotatedMeter;
-}(_react.Component);
+}(_react.Component); // (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
 
 AnnotatedMeter.displayName = 'AnnotatedMeter';
 exports.default = AnnotatedMeter;
 ;
 
 AnnotatedMeter.propTypes = {
+  onActive: _react.PropTypes.number,
+  legend: _react.PropTypes.bool,
   max: _react.PropTypes.number,
   series: _react.PropTypes.arrayOf(_react.PropTypes.shape({
     colorIndex: _react.PropTypes.string,
@@ -192,9 +201,5 @@ AnnotatedMeter.propTypes = {
   size: _Meter2.default.propTypes.size,
   type: _react.PropTypes.oneOf(['bar', 'circle']).isRequired,
   units: _react.PropTypes.string
-};
-
-AnnotatedMeter.defaultProps = {
-  max: 100
 };
 module.exports = exports['default'];
