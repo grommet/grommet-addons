@@ -107,4 +107,8 @@ ListPlaceholder.propTypes = {
   filteredTotal: _react.PropTypes.number,
   unfilteredTotal: _react.PropTypes.number
 };
+
+ListPlaceholder.defaultProps = {
+  emptyMessage: 'None'
+};
 module.exports = exports['default'];
