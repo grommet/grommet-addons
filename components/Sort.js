@@ -102,11 +102,17 @@ var Sort = function (_Component) {
       var props = (0, _objectWithoutProperties3.default)(_props3, ['options', 'value']);
 
       delete props.direction;
+      var label = void 0;
+      if (value) {
+        label = options.filter(function (option) {
+          return option.value === value;
+        })[0].label;
+      }
 
       return _react2.default.createElement(
         _Box2.default,
         (0, _extends3.default)({}, props, { direction: 'row', justify: 'start', align: 'center' }),
-        _react2.default.createElement(_Select2.default, { value: value, options: options, onChange: this._onChange }),
+        _react2.default.createElement(_Select2.default, { value: label, options: options, onChange: this._onChange }),
         _react2.default.createElement(
           _Box2.default,
           { direction: 'row', flex: false, responsive: false, align: 'center' },
@@ -127,13 +133,13 @@ exports.default = Sort;
 
 
 Sort.propTypes = {
+  direction: _react.PropTypes.oneOf(['asc', 'desc']),
+  onChange: _react.PropTypes.func, // { value: , direction: }
   options: _react.PropTypes.arrayOf(_react.PropTypes.shape({
     direction: _react.PropTypes.oneOf(['asc', 'desc']),
     label: _react.PropTypes.string,
     value: _react.PropTypes.string.isRequired
-  })),
-  direction: _react.PropTypes.oneOf(['asc', 'desc']),
-  onChange: _react.PropTypes.func, // { value: , direction: }
+  })).isRequired,
   value: _react.PropTypes.string
 };
 module.exports = exports['default'];
