@@ -30,10 +30,14 @@ export default class Sort extends Component {
   render () {
     const { options, value, ...props } = this.props;
     delete props.direction;
+    let label;
+    if (value) {
+      label = options.filter(option => option.value === value)[0].label;
+    }
 
     return (
       <Box {...props} direction='row' justify='start' align='center'>
-        <Select value={value} options={options} onChange={this._onChange} />
+        <Select value={label} options={options} onChange={this._onChange} />
         <Box direction='row' flex={false} responsive={false} align='center'>
           <Button icon={<AscIcon />}
             onClick={this._onChangeDirection.bind(this, 'asc')} />
@@ -47,12 +51,12 @@ export default class Sort extends Component {
 }
 
 Sort.propTypes = {
+  direction: PropTypes.oneOf(['asc', 'desc']),
+  onChange: PropTypes.func, // { value: , direction: }
   options: PropTypes.arrayOf(PropTypes.shape({
     direction: PropTypes.oneOf(['asc', 'desc']),
     label: PropTypes.string,
     value: PropTypes.string.isRequired
-  })),
-  direction: PropTypes.oneOf(['asc', 'desc']),
-  onChange: PropTypes.func, // { value: , direction: }
+  })).isRequired,
   value: PropTypes.string
 };

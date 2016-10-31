@@ -12,7 +12,10 @@ jest.mock('react-dom');
 describe('Sort', () => {
   it('has correct default options', () => {
     const component = renderer.create(
-      <Sort />
+      <Sort options={[
+        { label: 'First', value: 'first' },
+        { label: 'Second', value: 'second' }
+      ]}/>
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
