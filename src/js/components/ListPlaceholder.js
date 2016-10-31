@@ -47,3 +47,7 @@ ListPlaceholder.propTypes = {
   filteredTotal: PropTypes.number,
   unfilteredTotal: PropTypes.number
 };
+
+ListPlaceholder.defaultProps = {
+  emptyMessage: 'None'
+};
