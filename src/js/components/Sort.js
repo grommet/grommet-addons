@@ -36,7 +36,8 @@ export default class Sort extends Component {
     }
 
     return (
-      <Box {...props} direction='row' justify='start' align='center'>
+      <Box {...props} direction='row' justify='start' align='center'
+        responsive={false}>
         <Select value={label} options={options} onChange={this._onChange} />
         <Box direction='row' flex={false} responsive={false} align='center'>
           <Button icon={<AscIcon />}
