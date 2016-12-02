@@ -57,10 +57,10 @@ var FilterControl = function (_Component) {
   (0, _createClass3.default)(FilterControl, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var filteredTotal = _props.filteredTotal;
-      var onClick = _props.onClick;
-      var unfilteredTotal = _props.unfilteredTotal;
+      var _props = this.props,
+          filteredTotal = _props.filteredTotal,
+          onClick = _props.onClick,
+          unfilteredTotal = _props.unfilteredTotal;
 
       var top = unfilteredTotal > 0 ? unfilteredTotal : '.';
       var bottom = unfilteredTotal !== filteredTotal ? filteredTotal : '.';

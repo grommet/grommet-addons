@@ -55,11 +55,11 @@ var ListPlaceholder = function (_Component) {
   (0, _createClass3.default)(ListPlaceholder, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var addControl = _props.addControl;
-      var emptyMessage = _props.emptyMessage;
-      var filteredTotal = _props.filteredTotal;
-      var unfilteredTotal = _props.unfilteredTotal;
+      var _props = this.props,
+          addControl = _props.addControl,
+          emptyMessage = _props.emptyMessage,
+          filteredTotal = _props.filteredTotal,
+          unfilteredTotal = _props.unfilteredTotal;
 
 
       var content1 = void 0,

@@ -79,13 +79,13 @@ var AnnotatedMeter = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var legend = _props.legend;
-      var max = _props.max;
-      var series = _props.series;
-      var size = _props.size;
-      var type = _props.type;
-      var units = _props.units;
+      var _props = this.props,
+          legend = _props.legend,
+          max = _props.max,
+          series = _props.series,
+          size = _props.size,
+          type = _props.type,
+          units = _props.units;
       var index = this.state.index;
 
 

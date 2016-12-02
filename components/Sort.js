@@ -76,9 +76,9 @@ var Sort = function (_Component) {
   (0, _createClass3.default)(Sort, [{
     key: '_onChange',
     value: function _onChange(event) {
-      var _props = this.props;
-      var direction = _props.direction;
-      var onChange = _props.onChange;
+      var _props = this.props,
+          direction = _props.direction,
+          onChange = _props.onChange;
 
       var value = event.option.value;
       var nextDirection = event.option.direction || direction || 'desc';
@@ -87,19 +87,19 @@ var Sort = function (_Component) {
   }, {
     key: '_onChangeDirection',
     value: function _onChangeDirection(direction) {
-      var _props2 = this.props;
-      var onChange = _props2.onChange;
-      var value = _props2.value;
+      var _props2 = this.props,
+          onChange = _props2.onChange,
+          value = _props2.value;
 
       onChange({ value: value, direction: direction });
     }
   }, {
     key: 'render',
     value: function render() {
-      var _props3 = this.props;
-      var options = _props3.options;
-      var value = _props3.value;
-      var props = (0, _objectWithoutProperties3.default)(_props3, ['options', 'value']);
+      var _props3 = this.props,
+          options = _props3.options,
+          value = _props3.value,
+          props = (0, _objectWithoutProperties3.default)(_props3, ['options', 'value']);
 
       delete props.direction;
       var label = void 0;
@@ -111,7 +111,8 @@ var Sort = function (_Component) {
 
       return _react2.default.createElement(
         _Box2.default,
-        (0, _extends3.default)({}, props, { direction: 'row', justify: 'start', align: 'center' }),
+        (0, _extends3.default)({}, props, { direction: 'row', justify: 'start', align: 'center',
+          responsive: false }),
         _react2.default.createElement(_Select2.default, { value: label, options: options, onChange: this._onChange }),
         _react2.default.createElement(
           _Box2.default,

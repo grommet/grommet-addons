@@ -69,10 +69,10 @@ var SideSplit = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props = this.props;
-      var active = _props.active;
-      var children = _props.children;
-      var props = (0, _objectWithoutProperties3.default)(_props, ['active', 'children']);
+      var _props = this.props,
+          active = _props.active,
+          children = _props.children,
+          props = (0, _objectWithoutProperties3.default)(_props, ['active', 'children']);
       var responsive = this.state.responsive;
 
       var priority = active && 'single' === responsive ? 'left' : 'right';
@@ -103,8 +103,8 @@ SideSplit.SideCloser = function (props) {
 };
 
 SideSplit.SideOpener = function (props) {
-  var active = props.active;
-  var restProps = (0, _objectWithoutProperties3.default)(props, ['active']);
+  var active = props.active,
+      restProps = (0, _objectWithoutProperties3.default)(props, ['active']);
 
   if (active) {
     return _react2.default.createElement(
