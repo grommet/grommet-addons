@@ -28,7 +28,8 @@
     "babel-preset-react": "^6.16.0",
     "grommet-toolbox": "^1.0.0",
     "gulp-git": "^1.11.3",
-    "guppy-pre-commit": "^0.4.0"
+    "guppy-pre-commit": "^0.4.0",
+    "react-test-renderer": "^15.4.1"
   },
   "scripts": {
     "build": "gulp dist"

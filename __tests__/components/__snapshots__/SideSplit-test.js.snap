@@ -7,15 +7,14 @@ exports[`SideSplit has correct default options 1`] = `
       <div>
         <button
           aria-label="Close Menu"
-          className="grommetux-button grommetux-button--disabled grommetux-button--plain grommetux-button--icon"
+          className="grommetux-button grommetux-button--disabled grommetux-button--plain"
           disabled={true}
           href={undefined}
-          id={undefined}
-          onBlur={[Function onBlur]}
+          onBlur={[Function]}
           onClick={undefined}
-          onFocus={[Function onFocus]}
-          onMouseDown={[Function onMouseDown]}
-          onMouseUp={[Function onMouseUp]}
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
           type="button">
           <span
             className="grommetux-button__icon">

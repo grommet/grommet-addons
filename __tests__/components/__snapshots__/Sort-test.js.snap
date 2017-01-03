@@ -8,24 +8,21 @@ exports[`Sort has correct default options 1`] = `
   tabIndex={undefined}>
   <div
     className="grommetux-select"
-    onClick={[Function bound _onAddDrop]}>
+    onClick={[Function]}>
     <input
       className="grommetux-input grommetux-select__input"
       disabled={true}
-      id={undefined}
-      name={undefined}
-      value={undefined} />
+      value="" />
     <button
       aria-label="Select Icon"
-      className="grommetux-button grommetux-button--plain grommetux-button--icon grommetux-select__control"
+      className="grommetux-button grommetux-button--plain grommetux-select__control"
       disabled={false}
       href={undefined}
-      id={undefined}
-      onBlur={[Function onBlur]}
-      onClick={[Function bound _onAddDrop]}
-      onFocus={[Function onFocus]}
-      onMouseDown={[Function onMouseDown]}
-      onMouseUp={[Function onMouseUp]}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
       type="button">
       <span
         className="grommetux-button__icon">
@@ -55,15 +52,14 @@ exports[`Sort has correct default options 1`] = `
     tabIndex={undefined}>
     <button
       aria-label={undefined}
-      className="grommetux-button grommetux-button--plain grommetux-button--icon"
+      className="grommetux-button grommetux-button--plain"
       disabled={false}
       href={undefined}
-      id={undefined}
-      onBlur={[Function onBlur]}
-      onClick={[Function bound bound _onChangeDirection]}
-      onFocus={[Function onFocus]}
-      onMouseDown={[Function onMouseDown]}
-      onMouseUp={[Function onMouseUp]}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
       type="button">
       <span
         className="grommetux-button__icon">
@@ -86,15 +82,14 @@ exports[`Sort has correct default options 1`] = `
     </button>
     <button
       aria-label={undefined}
-      className="grommetux-button grommetux-button--plain grommetux-button--icon"
+      className="grommetux-button grommetux-button--plain"
       disabled={false}
       href={undefined}
-      id={undefined}
-      onBlur={[Function onBlur]}
-      onClick={[Function bound bound _onChangeDirection]}
-      onFocus={[Function onFocus]}
-      onMouseDown={[Function onMouseDown]}
-      onMouseUp={[Function onMouseUp]}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
       type="button">
       <span
         className="grommetux-button__icon">

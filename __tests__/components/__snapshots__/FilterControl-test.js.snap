@@ -1,15 +1,14 @@
 exports[`FilterControl has correct default options 1`] = `
 <button
   aria-label={undefined}
-  className="grommetux-button grommetux-button--disabled"
+  className="grommetux-button grommetux-button--disabled grommetux-button--plain"
   disabled={true}
   href={undefined}
-  id={undefined}
-  onBlur={[Function onBlur]}
+  onBlur={[Function]}
   onClick={undefined}
-  onFocus={[Function onFocus]}
-  onMouseDown={[Function onMouseDown]}
-  onMouseUp={[Function onMouseUp]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
   type="button">
   <div
     className="grommetux-box grommetux-box--direction-column grommetux-box--align-center grommetux-box--responsive grommetux-box--pad-horizontal-small"
