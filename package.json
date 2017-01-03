@@ -1,6 +1,6 @@
 {
   "name": "grommet-addons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Grommet higher level components.",
   "authors": [
     "Alan Souza",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "grommet": "https://github.com/grommet/grommet/tarball/stable",
-    "react-router": "^2.8.1"
+    "react-router": "^3.0.0"
   },
   "devDependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -28,7 +28,8 @@
     "babel-preset-react": "^6.16.0",
     "grommet-toolbox": "^1.0.0",
     "gulp-git": "^1.11.3",
-    "guppy-pre-commit": "^0.4.0"
+    "guppy-pre-commit": "^0.4.0",
+    "react-test-renderer": "^15.4.1"
   },
   "scripts": {
     "build": "gulp dist"
