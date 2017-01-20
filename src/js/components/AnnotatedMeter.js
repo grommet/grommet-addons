@@ -124,5 +124,7 @@ AnnotatedMeter.propTypes = {
 };
 
 AnnotatedMeter.defaultProps = {
-  valueFormatter: function(value) { return value; }
+  valueFormatter: function(value) {
+    return value;
+  }
 };
