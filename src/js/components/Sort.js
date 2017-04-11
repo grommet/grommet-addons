@@ -40,10 +40,12 @@ export default class Sort extends Component {
         <Select value={label} options={options} onChange={this._onChange} />
         <Box direction='row' flex={false} responsive={false} align='center'>
           <Button
-            icon={<AscIcon colorIndex={props.direction === 'asc' ? 'brand' : null} />}
+            icon={<AscIcon
+                colorIndex={props.direction === 'asc' ? 'brand' : null} />}
             onClick={this._onChangeDirection.bind(this, 'asc')} />
           <Button
-            icon={<DescIcon colorIndex={props.direction === 'desc' ? 'brand' : null}/>}
+            icon={<DescIcon
+                colorIndex={props.direction === 'desc' ? 'brand' : null} />}
             onClick={this._onChangeDirection.bind(this, 'desc')} />
         </Box>
       </Box>
