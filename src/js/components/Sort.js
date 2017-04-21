@@ -28,8 +28,7 @@ export default class Sort extends Component {
   }
 
   render () {
-    const { options, value, ...props } = this.props;
-    delete props.direction;
+    const { options, value, direction, ...props } = this.props;
     let label;
     if (value) {
       label = options.filter(option => option.value === value)[0].label;
@@ -40,10 +39,13 @@ export default class Sort extends Component {
         responsive={false}>
         <Select value={label} options={options} onChange={this._onChange} />
         <Box direction='row' flex={false} responsive={false} align='center'>
-          <Button icon={<AscIcon />}
+          <Button
+            icon={<AscIcon
+                colorIndex={direction === 'asc' ? 'brand' : undefined} />}
             onClick={this._onChangeDirection.bind(this, 'asc')} />
           <Button
-            icon={<DescIcon />}
+            icon={<DescIcon
+                colorIndex={direction === 'desc' ? 'brand' : undefined} />}
             onClick={this._onChangeDirection.bind(this, 'desc')} />
         </Box>
       </Box>
