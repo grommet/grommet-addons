@@ -99,9 +99,9 @@ var Sort = function (_Component) {
       var _props3 = this.props,
           options = _props3.options,
           value = _props3.value,
-          props = (0, _objectWithoutProperties3.default)(_props3, ['options', 'value']);
+          direction = _props3.direction,
+          props = (0, _objectWithoutProperties3.default)(_props3, ['options', 'value', 'direction']);
 
-      delete props.direction;
       var label = void 0;
       if (value) {
         label = options.filter(function (option) {
@@ -117,10 +117,13 @@ var Sort = function (_Component) {
         _react2.default.createElement(
           _Box2.default,
           { direction: 'row', flex: false, responsive: false, align: 'center' },
-          _react2.default.createElement(_Button2.default, { icon: _react2.default.createElement(_LinkDown2.default, null),
+          _react2.default.createElement(_Button2.default, {
+            icon: _react2.default.createElement(_LinkDown2.default, {
+              colorIndex: direction === 'asc' ? 'brand' : undefined }),
             onClick: this._onChangeDirection.bind(this, 'asc') }),
           _react2.default.createElement(_Button2.default, {
-            icon: _react2.default.createElement(_LinkUp2.default, null),
+            icon: _react2.default.createElement(_LinkUp2.default, {
+              colorIndex: direction === 'desc' ? 'brand' : undefined }),
             onClick: this._onChangeDirection.bind(this, 'desc') })
         )
       );
