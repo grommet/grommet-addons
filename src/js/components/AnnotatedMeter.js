@@ -25,7 +25,8 @@ export default class AnnotatedMeter extends Component {
   }
 
   render () {
-    const { legend, max, series, size, type, units } = this.props;
+    const { legend, max, series, size, type, units, valueFormatter } =
+      this.props;
     const { index } = this.state;
 
     let value, label;
@@ -44,7 +45,8 @@ export default class AnnotatedMeter extends Component {
       top = (
         <Box direction='row' justify='between' align='center'
           pad={{ between: 'small' }} responsive={false}>
-          <Value value={value} units={units} align='start' size={size} />
+          <Value value={valueFormatter(value)} units={units} align='start'
+            size={size} />
           <span>{label}</span>
         </Box>
       );
@@ -62,8 +64,8 @@ export default class AnnotatedMeter extends Component {
       middle = (
         <Meter type='circle' stacked={true} series={series}
           label={
-            <Value value={value} units={units} align='center' label={label}
-              size={size} />
+            <Value value={valueFormatter(value)} units={units} align='center'
+              label={label} size={size} />
           } max={max} size={size} activeIndex={index}
           onActive={this._onActive} />
       );
@@ -117,5 +119,12 @@ AnnotatedMeter.propTypes = {
   })).isRequired,
   size: Meter.propTypes.size,
   type: PropTypes.oneOf(['bar', 'circle']).isRequired,
-  units: PropTypes.string
+  units: PropTypes.string,
+  valueFormatter: PropTypes.func
+};
+
+AnnotatedMeter.defaultProps = {
+  valueFormatter: function(value) {
+    return value;
+  }
 };
