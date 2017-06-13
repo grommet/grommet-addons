@@ -15,9 +15,11 @@
     "type": "git",
     "url": "https://github.com/grommet/grommet-addons.git"
   },
+  "dependencies": {
+    "react-router": "^3.0.0"
+  },
   "peerDependencies": {
-    "grommet": ">=1.4.0",
-    "react-router": ">=3.0.0"
+    "grommet": ">=1.4.0"
   },
   "devDependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
