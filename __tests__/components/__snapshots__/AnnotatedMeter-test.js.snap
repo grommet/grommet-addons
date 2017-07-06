@@ -24,10 +24,12 @@ exports[`AnnotatedMeter has correct simple options 1`] = `
         className="grommetux-value grommetux-value--align-start">
         <div
           className="grommetux-value__annotated">
-          <span
-            className="grommetux-value__value">
-            30
-          </span>
+          <div>
+            <span
+              className="grommetux-value__value">
+              30
+            </span>
+          </div>
         </div>
       </div>
       <span>

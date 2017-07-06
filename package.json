@@ -1,6 +1,6 @@
 {
   "name": "grommet-addons",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Grommet higher level components.",
   "authors": [
     "Alan Souza",
@@ -16,7 +16,9 @@
     "url": "https://github.com/grommet/grommet-addons.git"
   },
   "dependencies": {
-    "grommet": "https://github.com/grommet/grommet/tarball/stable",
+    "grommet": "^1.5.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
     "react-router": "^3.0.0"
   },
   "devDependencies": {

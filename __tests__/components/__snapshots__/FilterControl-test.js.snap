@@ -33,7 +33,7 @@ exports[`FilterControl has correct default options 1`] = `
       <polygon
         fill="none"
         points="3 6 10 13 10 21 14 21 14 13 21 6 21 3 3 3"
-        stroke="#000000"
+        stroke="#000"
         strokeWidth="2" />
     </svg>
     <label

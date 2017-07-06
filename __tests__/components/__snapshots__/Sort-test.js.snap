@@ -11,7 +11,8 @@ exports[`Sort has correct default options 1`] = `
     onClick={[Function]}>
     <input
       className="grommetux-input grommetux-select__input"
-      disabled={true}
+      placeholder={undefined}
+      readOnly={true}
       value="" />
     <button
       aria-label="Select Icon"
@@ -37,7 +38,7 @@ exports[`Sort has correct default options 1`] = `
           <polygon
             fill="none"
             points="22 8 12 20 2 8"
-            stroke="#000000"
+            stroke="#000"
             strokeWidth="2" />
         </svg>
       </span>
@@ -74,7 +75,7 @@ exports[`Sort has correct default options 1`] = `
           <path
             d="M12,2 L12,22 M3,11 L12,2 L21,11"
             fill="none"
-            stroke="#000000"
+            stroke="#000"
             strokeWidth="2"
             transform="matrix(1 0 0 -1 0 24)" />
         </svg>
@@ -104,7 +105,7 @@ exports[`Sort has correct default options 1`] = `
           <path
             d="M12,2 L12,22 M3,11 L12,2 L21,11"
             fill="none"
-            stroke="#000000"
+            stroke="#000"
             strokeWidth="2" />
         </svg>
       </span>
