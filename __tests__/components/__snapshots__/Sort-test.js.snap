@@ -13,6 +13,7 @@ exports[`Sort has correct default options 1`] = `
       className="grommetux-input grommetux-select__input"
       placeholder={undefined}
       readOnly={true}
+      type="text"
       value="" />
     <button
       aria-label="Select Icon"
