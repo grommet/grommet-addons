@@ -39,7 +39,7 @@ export default class AnnotatedMeter extends Component {
       label = <FormattedMessage id='Total' defaultMessage='Total' />;
     }
 
-    let top, middle, bottom, alignLegend;
+    let top, middle, bottom, alignMeter, alignLegend;
     if ('bar' === type) {
 
       top = (
@@ -56,6 +56,7 @@ export default class AnnotatedMeter extends Component {
           onActive={this._onActive} />
       );
 
+      alignMeter = 'start';   
       alignLegend = 'start';
 
     } else if ('circle' === type) {
@@ -69,6 +70,7 @@ export default class AnnotatedMeter extends Component {
           onActive={this._onActive} />
       );
 
+      alignMeter='center';
       alignLegend = 'center';
     }
 
@@ -94,7 +96,7 @@ export default class AnnotatedMeter extends Component {
 
     return (
       <Box align='start'>
-        <Box>
+        <Box align={alignMeter}>
           {top}
           {middle}
           {bottom}
