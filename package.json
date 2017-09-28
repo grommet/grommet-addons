@@ -15,10 +15,13 @@
     "type": "git",
     "url": "https://github.com/grommet/grommet-addons.git"
   },
+  "peerDependencies": {
+    "react": ">= 15.3.0 < 16 || 16.x",
+    "react-dom": ">= 15.3.0 < 16 || 16.x"
+  },
   "dependencies": {
     "grommet": "^1.5.0",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
     "react-router": "^3.0.0"
   },
   "devDependencies": {
@@ -31,7 +34,9 @@
     "grommet-toolbox": "^1.0.0",
     "gulp-git": "^1.11.3",
     "guppy-pre-commit": "^0.4.0",
-    "react-test-renderer": "^15.4.1"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0"
   },
   "scripts": {
     "build": "gulp dist"
