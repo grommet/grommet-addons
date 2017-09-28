@@ -36,6 +36,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Button = require('grommet/components/Button');
 
 var _Button2 = _interopRequireDefault(_Button);
@@ -57,8 +61,6 @@ var _LinkUp = require('grommet/components/icons/base/LinkUp');
 var _LinkUp2 = _interopRequireDefault(_LinkUp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
 
 var Sort = function (_Component) {
   (0, _inherits3.default)(Sort, _Component);
@@ -130,20 +132,20 @@ var Sort = function (_Component) {
     }
   }]);
   return Sort;
-}(_react.Component);
+}(_react.Component); // (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
 
 Sort.displayName = 'Sort';
 exports.default = Sort;
 
 
 Sort.propTypes = {
-  direction: _react.PropTypes.oneOf(['asc', 'desc']),
-  onChange: _react.PropTypes.func, // { value: , direction: }
-  options: _react.PropTypes.arrayOf(_react.PropTypes.shape({
-    direction: _react.PropTypes.oneOf(['asc', 'desc']),
-    label: _react.PropTypes.string,
-    value: _react.PropTypes.string.isRequired
+  direction: _propTypes2.default.oneOf(['asc', 'desc']),
+  onChange: _propTypes2.default.func, // { value: , direction: }
+  options: _propTypes2.default.arrayOf(_propTypes2.default.shape({
+    direction: _propTypes2.default.oneOf(['asc', 'desc']),
+    label: _propTypes2.default.string,
+    value: _propTypes2.default.string.isRequired
   })).isRequired,
-  value: _react.PropTypes.string
+  value: _propTypes2.default.string
 };
 module.exports = exports['default'];

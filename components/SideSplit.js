@@ -36,6 +36,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Split = require('grommet/components/Split');
 
 var _Split2 = _interopRequireDefault(_Split);
@@ -49,8 +53,6 @@ var _Close = require('grommet/components/icons/base/Close');
 var _Close2 = _interopRequireDefault(_Close);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// (C) Copyright 2016 Hewlett Packard Enterprise Development LP
 
 var SideSplit = function (_Component) {
   (0, _inherits3.default)(SideSplit, _Component);
@@ -87,15 +89,15 @@ var SideSplit = function (_Component) {
     }
   }]);
   return SideSplit;
-}(_react.Component);
+}(_react.Component); // (C) Copyright 2016 Hewlett Packard Enterprise Development LP
 
 SideSplit.displayName = 'SideSplit';
 exports.default = SideSplit;
 ;
 
 SideSplit.propTypes = {
-  active: _react.PropTypes.bool,
-  logo: _react.PropTypes.node
+  active: _propTypes2.default.bool,
+  logo: _propTypes2.default.node
 };
 
 SideSplit.SideCloser = function (props) {

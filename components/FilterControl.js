@@ -28,6 +28,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Box = require('grommet/components/Box');
 
 var _Box2 = _interopRequireDefault(_Box);
@@ -45,6 +49,8 @@ var _Filter = require('grommet/components/icons/base/Filter');
 var _Filter2 = _interopRequireDefault(_Filter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
 
 var FilterControl = function (_Component) {
   (0, _inherits3.default)(FilterControl, _Component);
@@ -87,15 +93,15 @@ var FilterControl = function (_Component) {
     }
   }]);
   return FilterControl;
-}(_react.Component); // (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
+}(_react.Component);
 
 FilterControl.displayName = 'FilterControl';
 exports.default = FilterControl;
 ;
 
 FilterControl.propTypes = {
-  filteredTotal: _react.PropTypes.number,
-  onClick: _react.PropTypes.func,
-  unfilteredTotal: _react.PropTypes.number
+  filteredTotal: _propTypes2.default.number,
+  onClick: _propTypes2.default.func,
+  unfilteredTotal: _propTypes2.default.number
 };
 module.exports = exports['default'];

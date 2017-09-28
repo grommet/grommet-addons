@@ -28,6 +28,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Meter = require('grommet/components/Meter');
 
 var _Meter2 = _interopRequireDefault(_Meter);
@@ -51,8 +55,6 @@ var _FormattedMessage2 = _interopRequireDefault(_FormattedMessage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import Label from 'grommet/components/Label';
-// (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
-
 var AnnotatedMeter = function (_Component) {
   (0, _inherits3.default)(AnnotatedMeter, _Component);
 
@@ -170,24 +172,24 @@ var AnnotatedMeter = function (_Component) {
     }
   }]);
   return AnnotatedMeter;
-}(_react.Component);
+}(_react.Component); // (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
 
 AnnotatedMeter.displayName = 'AnnotatedMeter';
 exports.default = AnnotatedMeter;
 ;
 
 AnnotatedMeter.propTypes = {
-  onActive: _react.PropTypes.number,
-  legend: _react.PropTypes.bool,
-  max: _react.PropTypes.number,
-  series: _react.PropTypes.arrayOf(_react.PropTypes.shape({
-    colorIndex: _react.PropTypes.string,
-    onClick: _react.PropTypes.func,
-    label: _react.PropTypes.string.isRequired,
-    value: _react.PropTypes.number.isRequired
+  onActive: _propTypes2.default.number,
+  legend: _propTypes2.default.bool,
+  max: _propTypes2.default.number,
+  series: _propTypes2.default.arrayOf(_propTypes2.default.shape({
+    colorIndex: _propTypes2.default.string,
+    onClick: _propTypes2.default.func,
+    label: _propTypes2.default.string.isRequired,
+    value: _propTypes2.default.number.isRequired
   })).isRequired,
   size: _Meter2.default.propTypes.size,
-  type: _react.PropTypes.oneOf(['bar', 'circle']).isRequired,
-  units: _react.PropTypes.string
+  type: _propTypes2.default.oneOf(['bar', 'circle']).isRequired,
+  units: _propTypes2.default.string
 };
 module.exports = exports['default'];

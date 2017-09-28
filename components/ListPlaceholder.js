@@ -28,6 +28,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Box = require('grommet/components/Box');
 
 var _Box2 = _interopRequireDefault(_Box);
@@ -41,8 +45,6 @@ var _FormattedMessage = require('grommet/components/FormattedMessage');
 var _FormattedMessage2 = _interopRequireDefault(_FormattedMessage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
 
 var ListPlaceholder = function (_Component) {
   (0, _inherits3.default)(ListPlaceholder, _Component);
@@ -64,7 +66,7 @@ var ListPlaceholder = function (_Component) {
 
       var content1 = void 0,
           content2 = void 0;
-      if (undefined === filteredTotal) {
+      if (!filteredTotal) {
         content1 = _react2.default.createElement(_Spinning2.default, null);
       } else if (unfilteredTotal === 0) {
         content1 = _react2.default.createElement(
@@ -95,17 +97,17 @@ var ListPlaceholder = function (_Component) {
     }
   }]);
   return ListPlaceholder;
-}(_react.Component);
+}(_react.Component); // (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
 
 ListPlaceholder.displayName = 'ListPlaceholder';
 exports.default = ListPlaceholder;
 ;
 
 ListPlaceholder.propTypes = {
-  addControl: _react.PropTypes.element,
-  emptyMessage: _react.PropTypes.string,
-  filteredTotal: _react.PropTypes.number,
-  unfilteredTotal: _react.PropTypes.number
+  addControl: _propTypes2.default.element,
+  emptyMessage: _propTypes2.default.string,
+  filteredTotal: _propTypes2.default.number,
+  unfilteredTotal: _propTypes2.default.number
 };
 
 ListPlaceholder.defaultProps = {
