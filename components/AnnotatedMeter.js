@@ -107,6 +107,7 @@ var AnnotatedMeter = function (_Component) {
       var top = void 0,
           middle = void 0,
           bottom = void 0,
+          alignMeter = void 0,
           alignLegend = void 0;
       if ('bar' === type) {
 
@@ -126,6 +127,7 @@ var AnnotatedMeter = function (_Component) {
           size: size, activeIndex: index,
           onActive: this._onActive });
 
+        alignMeter = 'start';
         alignLegend = 'start';
       } else if ('circle' === type) {
 
@@ -134,6 +136,7 @@ var AnnotatedMeter = function (_Component) {
             size: size }), max: max, size: size, activeIndex: index,
           onActive: this._onActive });
 
+        alignMeter = 'center';
         alignLegend = 'center';
       }
 
@@ -162,7 +165,7 @@ var AnnotatedMeter = function (_Component) {
         { align: 'start' },
         _react2.default.createElement(
           _Box2.default,
-          null,
+          { align: alignMeter },
           top,
           middle,
           bottom,
