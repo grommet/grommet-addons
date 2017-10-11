@@ -182,7 +182,7 @@ exports.default = AnnotatedMeter;
 ;
 
 AnnotatedMeter.propTypes = {
-  onActive: _propTypes2.default.number,
+  onActive: _propTypes2.default.func,
   legend: _propTypes2.default.bool,
   max: _propTypes2.default.number,
   series: _propTypes2.default.arrayOf(_propTypes2.default.shape({
