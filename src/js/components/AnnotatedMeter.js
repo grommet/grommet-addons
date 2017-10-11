@@ -109,7 +109,7 @@ export default class AnnotatedMeter extends Component {
 };
 
 AnnotatedMeter.propTypes = {
-  onActive: PropTypes.number,
+  onActive: PropTypes.func,
   legend: PropTypes.bool,
   max: PropTypes.number,
   series: PropTypes.arrayOf(PropTypes.shape({
