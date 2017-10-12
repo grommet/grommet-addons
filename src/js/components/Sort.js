@@ -35,7 +35,7 @@ export default class Sort extends Component {
     if (value) {
       selectedOption = options.filter(option => option.value === value);
     }
- 
+
     return (
       <Box {...props} direction='row' justify='start' align='center'
         responsive={false}>
