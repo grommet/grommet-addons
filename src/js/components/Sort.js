@@ -33,9 +33,9 @@ export default class Sort extends Component {
 
     let selectedOption;
     if (value) {
-      selectedOption = options.filter(option => option.value === value);
+      selectedOption = options.filter(option => option.value === value)[0];
     }
- 
+
     return (
       <Box {...props} direction='row' justify='start' align='center'
         responsive={false}>
