@@ -30,15 +30,17 @@ export default class Sort extends Component {
 
   render () {
     const { options, value, direction, ...props } = this.props;
-    let label;
+
+    let selectedOption;
     if (value) {
-      label = options.filter(option => option.value === value)[0].label;
+      selectedOption = options.filter(option => option.value === value)[0];
     }
 
     return (
       <Box {...props} direction='row' justify='start' align='center'
         responsive={false}>
-        <Select value={label} options={options} onChange={this._onChange} />
+        <Select value={selectedOption} options={options} 
+                onChange={this._onChange} />
         <Box direction='row' flex={false} responsive={false} align='center'>
           <Button
             icon={<AscIcon
