@@ -104,18 +104,20 @@ var Sort = function (_Component) {
           direction = _props3.direction,
           props = (0, _objectWithoutProperties3.default)(_props3, ['options', 'value', 'direction']);
 
-      var label = void 0;
+
+      var selectedOption = void 0;
       if (value) {
-        label = options.filter(function (option) {
+        selectedOption = options.filter(function (option) {
           return option.value === value;
-        })[0].label;
+        })[0];
       }
 
       return _react2.default.createElement(
         _Box2.default,
         (0, _extends3.default)({}, props, { direction: 'row', justify: 'start', align: 'center',
           responsive: false }),
-        _react2.default.createElement(_Select2.default, { value: label, options: options, onChange: this._onChange }),
+        _react2.default.createElement(_Select2.default, { value: selectedOption, options: options,
+          onChange: this._onChange }),
         _react2.default.createElement(
           _Box2.default,
           { direction: 'row', flex: false, responsive: false, align: 'center' },
