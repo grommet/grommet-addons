@@ -14,7 +14,7 @@ export default class ListPlaceholder extends Component {
     } = this.props;
 
     let content1, content2;
-    if (!filteredTotal) {
+    if (undefined === filteredTotal || null === filteredTotal) {
       content1 = <SpinningIcon />;
     } else if (unfilteredTotal === 0) {
       content1 = <span className='secondary'>{emptyMessage}</span>;
