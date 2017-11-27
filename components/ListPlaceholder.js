@@ -66,9 +66,7 @@ var ListPlaceholder = function (_Component) {
 
       var content1 = void 0,
           content2 = void 0;
-      if (!filteredTotal) {
-        content1 = _react2.default.createElement(_Spinning2.default, null);
-      } else if (unfilteredTotal === 0) {
+      if (unfilteredTotal === 0) {
         content1 = _react2.default.createElement(
           'span',
           { className: 'secondary' },
@@ -81,6 +79,8 @@ var ListPlaceholder = function (_Component) {
           { className: 'secondary' },
           _react2.default.createElement(_FormattedMessage2.default, { id: 'No matches', defaultMessage: 'No matches' })
         );
+      } else if (!filteredTotal) {
+        content1 = _react2.default.createElement(_Spinning2.default, null);
       }
       if (content1) {
         content1 = _react2.default.createElement(
