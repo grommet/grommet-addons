@@ -14,9 +14,7 @@ export default class ListPlaceholder extends Component {
     } = this.props;
 
     let content1, content2;
-    if (undefined === filteredTotal || null === filteredTotal) {
-      content1 = <SpinningIcon />;
-    } else if (unfilteredTotal === 0) {
+    if (unfilteredTotal === 0) {
       content1 = <span className='secondary'>{emptyMessage}</span>;
       content2 = addControl;
     } else if (filteredTotal === 0) {
@@ -25,6 +23,8 @@ export default class ListPlaceholder extends Component {
           <FormattedMessage id='No matches' defaultMessage='No matches' />
         </span>
       );
+    } else if (!filteredTotal) {
+      content1 = <SpinningIcon />;
     }
     if (content1) {
       content1 = (
