@@ -87,7 +87,9 @@ var AnnotatedMeter = function (_Component) {
           series = _props.series,
           size = _props.size,
           type = _props.type,
-          units = _props.units;
+          units = _props.units,
+          _props$defaultMessage = _props.defaultMessage,
+          defaultMessage = _props$defaultMessage === undefined ? 'Total' : _props$defaultMessage;
       var index = this.state.index;
 
 
@@ -101,7 +103,7 @@ var AnnotatedMeter = function (_Component) {
         series.forEach(function (item) {
           return value += item.value;
         });
-        label = _react2.default.createElement(_FormattedMessage2.default, { id: 'Total', defaultMessage: 'Total' });
+        label = _react2.default.createElement(_FormattedMessage2.default, { id: 'Total', defaultMessage: defaultMessage });
       }
 
       var top = void 0,
@@ -193,6 +195,7 @@ AnnotatedMeter.propTypes = {
   })).isRequired,
   size: _Meter2.default.propTypes.size,
   type: _propTypes2.default.oneOf(['bar', 'circle']).isRequired,
-  units: _propTypes2.default.string
+  units: _propTypes2.default.string,
+  defaultMessage: _propTypes2.default.string
 };
 module.exports = exports['default'];
