@@ -26,7 +26,8 @@ export default class AnnotatedMeter extends Component {
   }
 
   render () {
-    const { legend, max, series, size, type, units } = this.props;
+    const { legend, max, series, size, type, units, 
+            defaultMessage = 'Total' } = this.props;
     const { index } = this.state;
 
     let value, label;
@@ -36,7 +37,7 @@ export default class AnnotatedMeter extends Component {
     } else {
       value = 0;
       series.forEach(item => value += item.value);
-      label = <FormattedMessage id='Total' defaultMessage='Total' />;
+      label = <FormattedMessage id='Total' defaultMessage={defaultMessage} />;
     }
 
     let top, middle, bottom, alignMeter, alignLegend;
@@ -120,5 +121,6 @@ AnnotatedMeter.propTypes = {
   })).isRequired,
   size: Meter.propTypes.size,
   type: PropTypes.oneOf(['bar', 'circle']).isRequired,
-  units: PropTypes.string
+  units: PropTypes.string,
+  defaultMessage: PropTypes.string
 };
