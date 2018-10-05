@@ -27,7 +27,7 @@ export default class AnnotatedMeter extends Component {
 
   render () {
     const { legend, max, series, size, type, units, 
-            defaultMessage = 'Total' } = this.props;
+            defaultMessage = 'Total', totalValuePrecision } = this.props;
     const { index } = this.state;
 
     let value, label;
@@ -37,7 +37,12 @@ export default class AnnotatedMeter extends Component {
     } else {
       value = 0;
       series.forEach(item => value += item.value);
-      label = <FormattedMessage id='Total' defaultMessage={defaultMessage} />;
+      if ( totalValuePrecision ) {
+        value = value.toFixed(totalValuePrecision);
+      }
+      label = defaultMessage ?
+        <span>{defaultMessage}</span>
+        : <FormattedMessage id='Total' />;
     }
 
     let top, middle, bottom, alignMeter, alignLegend;
@@ -108,6 +113,9 @@ export default class AnnotatedMeter extends Component {
   }
 
 };
+AnnotatedMeter.defaultProps = {
+  totalValuePrecision: undefined
+};
 
 AnnotatedMeter.propTypes = {
   onActive: PropTypes.func,
@@ -122,5 +130,6 @@ AnnotatedMeter.propTypes = {
   size: Meter.propTypes.size,
   type: PropTypes.oneOf(['bar', 'circle']).isRequired,
   units: PropTypes.string,
-  defaultMessage: PropTypes.string
+  defaultMessage: PropTypes.string,
+  totalValuePrecision: PropTypes.number
 };
