@@ -37,7 +37,9 @@ export default class AnnotatedMeter extends Component {
     } else {
       value = 0;
       series.forEach(item => value += item.value);
-      label = <FormattedMessage id='Total' defaultMessage={defaultMessage} />;
+      label = defaultMessage ?
+        <span>{defaultMessage}</span>
+        : <FormattedMessage id='Total' />;
     }
 
     let top, middle, bottom, alignMeter, alignLegend;
